@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Card({ imageUrl,title }) {
+function Card({ id, imageUrl, title, removeCards }) {
   return (
     <article className="single-tour">
       <img src={imageUrl} alt="" />
@@ -11,7 +11,9 @@ function Card({ imageUrl,title }) {
         <p>
           <button></button>
         </p>
-        <button className="delete-btn">Delete</button>
+        <button className="delete-btn" onClick={() => removeCards(id)}>
+          Delete
+        </button>
       </footer>
     </article>
   );
